@@ -1,52 +1,366 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>MustangJS</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/prism.css">
+  <script type="text/javascript" src="javascripts/prism.js"></script>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="mustang javascript, mustang js, mustang javascript library">
+</head>
+<body>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Mustangjs : A small JavaScript library made for quick and easy DOM manipulation / binding." />
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="content-center col-lg-8">
+        
+        <div class="navbar-header">
+          
+        </div>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#quick">Examples</a></li>
+            <li class="dropdown" id="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+              <ul class="dropdown-menu" id="dropdown-menu">
+                <li><a href="#classname">class Mustang</a></li>
+                <li><a href="#classname">class MustangCollection</a></li>
+                
+                <li class="divider"></li>
+                <li><a href="#docs">All</a></li>
+              </ul>
+            </li>
+            <li><a href="#quick">About</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
 
-    <title>Mustangjs</title>
-  </head>
+  
+    <div class="content-center img-content text-center col-lg-8">
+        <h1 id="heading-logo">Mustang JS</h1>
+        <i>A JavaScript Library meant to make modifying &amp; binding to the DOM much easier and faster, and in an Object-Oriented way.</i>
 
-  <body>
+        <div class="brand-icon">
+            <span class="fa fa-globe"></span>
+            <small>IE9+, FireFox 27+, Chrome 3+, Safari + , &amp; Opera + (need to test)</small>
+        </div>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/mustangJS/mustangJS">View on GitHub</a>
-
-          <h1 id="project_title">Mustangjs</h1>
-          <h2 id="project_tagline">A small JavaScript library made for quick and easy DOM manipulation / binding.</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/mustangJS/mustangJS/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/mustangJS/mustangJS/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+        <div class="brand-icon">
+            <span class="fa fa-sitemap"></span>
+            <small>Object Oriented Code &amp; Syntax</small>
+        </div>
+        
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="mustangjs" class="anchor" href="#mustangjs"><span class="octicon octicon-link"></span></a>MustangJS</h1>
+    <div class="content-center reg-content col-lg-8">
+        <h1 id="heading-logo">Examples</h1>
+        
+        <p>See some quick and concise examples of Mustang in action.</p>
 
-<p><em>A JavaScript Library meant to make modifying &amp; binding to the DOM much easier and faster, and in an Object-Oriented way.</em></p>
-      </section>
+        <div class="large-gap"></div>
+
+        <h3 class="text-left">Querying an Element</h3>
+
+        <pre class="">
+            <code class="language-javascript">
+              var elem = new Mustang(".classname");
+            </code>
+        </pre>
+
+        <p class="text-left">Or, say you need all elements with a class including <i>'classname'</i>.</p>
+
+        <div class="small-gap"></div>
+
+        <h3 class="text-left">Querying Multiple Elements</h3>
+
+        <pre class="">
+            <code class="language-javascript">
+              var elems = new Mustang(".classname");
+
+              // this returns a new MustangCollection
+            </code>
+        </pre>
+
+        <div class="small-gap"></div>
+
+        <h3 class="text-left">MustangCollections</h3>
+
+        <p class="text-left">Mustang Collections aren't anything extra special, it's just an object that holds an array of Mustang objects, with a few special functions. The keys of the array are in the order in which they are found in the DOM. There are different functions used to find specific elements in these returned MustangCollections. You can see them <a href="#here">here</a>.</p>
+
+        <div class="large-gap"></div>
+
+        <h3 class="text-left">Getting / Setting Content of Mustang objects and MustangCollections</h3>
+
+        <pre class="">
+            <code class="language-javascript">
+              var elem = new Mustang(".single");
+
+              elem.setContent("New Content");
+
+              // or query multiple elements, and reset the content of them all
+              var coll = new Mustang(".multiple");
+
+              coll.setContent("All elements will be replaced with this string");
+            </code>
+        </pre>
+
+        <div class="large-gap"></div>
+
+        <h3><i>If you've made it this far, take a look at the docs below. There's a lot more to Mustang than just querying elements!</i></h3>
+        
     </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Mustangjs maintained by <a href="https://github.com/mustangJS">mustangJS</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
+    <div class="content-center img-content  col-lg-11">
+        <h1 id="docs" >Documentation</h1>
+        <i>A complete reference to all classes, objects, and methods of each in the MustangJS library.</i>
+
+        <div class="clearfix"></div>
+
+        <div class="docs-container col-lg-12">
+            <div class="col-lg-4 no-pad doc-list">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <span class="badge">3</span>
+                    <a href="#mustang">Mustang</a>
+                    <ul class="method">
+                        <li><a href="#mustanggetContent">getContent()</a></li>
+                        <li><a href="#mustangsetContent">setContent()</a></li>
+                        <li><a href="#mustanggetValue">getValue()</a></li>
+                        <li><a href="#mustangsetValue">setValue()</a></li>
+                        <li><a href="#mustanggetType">getType()</a></li>
+                        <li><a href="#mustangbindToVar">bindToVar()</a></li>
+                    </ul>
+                  </li>
+                  <li class="list-group-item">
+                    <span class="badge">7</span>
+                    <a href="#mustangcollection">MustangCollection</a>
+                    <ul class="method">
+                        <li><a href="#mustangMethodName">methodName()</a></li>
+                        <li><a href="#mustangMethodName2">otherMethod()</a></li>
+                    </ul>
+                  </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-8 doc-content">
+                <div class="doc-content-section col-lg-12" id="mustang">
+                    <h2>Mustang Object</h2>
+                    <p class="details lead">Details : </p>
+                    <p>The original <i>Mustang</i> object. Runs mostly off of the Sizzle.js selector engine, but we added a couple of functions ourselves to make DOM manipulation pretty easy &amp; fun to do. If your familiar with jQuery this should be a breeze, with a brief change in syntax. Pass a css selector to the constructor and you'll recieve a new Mustang Object.</p>
+
+                    <div class="small-gap"></div>
+
+                    <p class="lead">Instantiating Mustang Object</p>
+                    <pre class="">
+                        <code class="language-javascript">
+                          // instantiate new object
+                          var example = new Mustang(".classname");
+                        </code>
+                    </pre>
+
+                    <div class="small-gap"></div>
+
+
+
+                    <h3 class="lead">Methods Reference</h3>
+
+                    <div class="method-container">
+                        <h4 id="mustanggetContent">Mustang.getContent()</h4>
+
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>(none)</dd>
+                            <dt>@return</dt>
+                            <dd>mixed</dd>
+                        </dl>
+
+                        <p>Grab the content (innerHTML) of an element.</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              var cont = example.getContent();
+
+                              // you can also method chain like below
+
+                              var cont = new Mustang(".classname").getContent();
+                            </code>
+                        </pre>
+
+                    </div>
+
+                    
+
+
+                    <div class="method-container">
+                        <h4 id="mustangsetContent">Mustang.setContent(mixed)</h4>
+
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>string, int, primitive data types</dd>
+                            <dt>@return</dt>
+                            <dd>Mustang Object</dd>
+                        </dl>
+
+                        <p>Sets the content (innerHTML) of an element.</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              var content = "String";
+                              example.setContent(content);
+
+                              content = 5;
+                              example.setContent(content);
+
+                              // you can also method chain like below
+
+                              var example = new Mustang(".classname").setContent("New Content");
+                            </code>
+                        </pre>
+
+                    </div>
+
+
+                    <div class="method-container">
+                        <h4 id="mustangsetContent">Mustang.getValue()</h4>
+
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>(none)</dd>
+                            <dt>@return</dt>
+                            <dd>mixed</dd>
+                        </dl>
+
+                        <p>Gets the value of an element, if it is a form element (input, textarea, etc).</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              
+                              var content = example.getValue();
+
+
+                              // you can also method chain like below
+
+                              var stuff = new Mustang(".classname").getValue();
+                            </code>
+                        </pre>
+
+                    </div>
+
+                    <div class="method-container">
+                        <h4 id="mustangsetValue">Mustang.setValue(mixed)</h4>
+
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>string, int, primitive data types</dd>
+                            <dt>@return</dt>
+                            <dd>Mustang Object</dd>
+                        </dl>
+
+                        <p>Sets the value of an element, if it is a form element (input, textarea, etc).</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              var content = "String";
+                              example.setValue(content);
+
+                              content = 5;
+                              example.setValue(content);
+
+                              // you can also method chain like below
+
+                              var example = new Mustang(".classname").setValue("New Content");
+                            </code>
+                        </pre>
+
+                    </div>
+
+                    <div class="method-container">
+                        <h4 id="mustangsetValue">Mustang.getType()</h4>
+
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>(none)</dd>
+                            <dt>@return</dt>
+                            <dd>String, either "block" or "form"</dd>
+                        </dl>
+
+                        <p>Returns the type of an element, if it is a form (input, textarea, etc) element or a block element (p, h1, etc) </p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              // returns 'form' or 'block'
+                              example.getType();
+
+                              // could use via method chaining
+                              var type = new Mustang(".selector").getType();
+                            </code>
+                        </pre>
+
+                    </div>
+
+                    <div class="method-container">
+                        <h4 id="mustangbindToVar">Mustang.bindToVar(mixed *optional)</h4>
+
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>Mixed, initial value for var</dd>
+                            <dt>@return</dt>
+                            <dd><i>Relationship</i> object</dd>
+                        </dl>
+
+                        <p>Returns an object with interface available for modifying the model or element to which this is binded.</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              // returns 'Relationship' object, passing in initial value
+                              example.bindToVar(10);
+
+                              // could use via method chaining, no initial value
+                              var type = new Mustang(".selector").bindToVar();
+                            </code>
+                        </pre>
+
+                    </div>
+
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        
+        
     </div>
 
     
 
-  </body>
+
+
+<footer class="col-lg-12">
+    <p class="text-center">All Rights Reserved Motha Fuckasss</p>
+</footer>
+  
+
+
+<script type="text/javascript" src="javascripts/main.js"></script>
+
+</body>
 </html>
