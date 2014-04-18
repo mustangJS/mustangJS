@@ -28,8 +28,8 @@
             <li class="dropdown" id="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
               <ul class="dropdown-menu" id="dropdown-menu">
-                <li><a href="#classname">class Mustang</a></li>
-                <li><a href="#classname">class MustangCollection</a></li>
+                <li><a href="#mustang">class Mustang</a></li>
+                <li><a href="#mustangCollection">class MustangCollection</a></li>
                 
                 <li class="divider"></li>
                 <li><a href="#docs">All</a></li>
@@ -135,6 +135,7 @@
                         <li><a href="#mustangsetValue">setValue()</a></li>
                         <li><a href="#mustanggetType">getType()</a></li>
                         <li><a href="#mustangbindToVar">bindToVar()</a></li>
+                        <li><a href="#mustangtoJson">toJson()</a></li>
                     </ul>
                   </li>
                   <li class="list-group-item">
@@ -231,7 +232,7 @@
 
 
                     <div class="method-container">
-                        <h4 id="mustangsetContent">Mustang.getValue()</h4>
+                        <h4 id="mustanggetValue">Mustang.getValue()</h4>
 
                         <dl>
                             <dt>@var</dt>
@@ -289,7 +290,7 @@
                     </div>
 
                     <div class="method-container">
-                        <h4 id="mustangsetValue">Mustang.getType()</h4>
+                        <h4 id="mustanggetType">Mustang.getType()</h4>
 
                         <dl>
                             <dt>@var</dt>
@@ -335,6 +336,36 @@
 
                               // could use via method chaining, no initial value
                               var type = new Mustang(".selector").bindToVar();
+                            </code>
+                        </pre>
+
+                    </div>
+
+                    <div class="method-container">
+                        <h4 id="mustangtoJson">Mustang.toJson()</h4>
+
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>(none)</dd>
+                            <dt>@return</dt>
+                            <dd>JSON</dd>
+                        </dl>
+
+                        <p>Returns a properly formatted JSON object according to the element and a corresponding value depending on it's type. If the element is a form element, the value of the object will be the value of said form element, else it will be the innerHTML of all block elements.</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              // returns 'Relationship' object, passing in initial value
+                              var obj = example.toJson();
+
+                              /*
+                              The default JSON object returned from toJson()
+                              {
+                                "value" : "This is the value or innerHTML of the element"
+                              }
+                              */
                             </code>
                         </pre>
 
