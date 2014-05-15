@@ -127,6 +127,7 @@ footer{
   background:#333333;
   color:white;
   z-index:400;
+  text-transform:uppercase;
 }
 
 .details{
@@ -152,4 +153,21 @@ footer{
 
 .method-container{
   margin:75px 0px;
+}
+
+#logo{
+	margin-bottom:50px;
+	width:100%;
+}
+
+#class-list{
+	
+}
+
+.text-red{
+	color:#ff534e;
+}
+
+.text-red:hover{
+	color:#ff534e;
 }

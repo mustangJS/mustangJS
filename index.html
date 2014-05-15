@@ -4,6 +4,7 @@
   <title>MustangJS</title>
   <link rel="stylesheet" type="text/css" href="stylesheets/prism.css">
   <script type="text/javascript" src="javascripts/prism.js"></script>
+  
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
   
@@ -28,8 +29,11 @@
             <li class="dropdown" id="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
               <ul class="dropdown-menu" id="dropdown-menu">
-                <li><a href="#mustang">class Mustang</a></li>
-                <li><a href="#mustangCollection">class MustangCollection</a></li>
+                <li><a href="#mustang">class <i class="text-red">Mustang</i></a></li>
+                <li><a href="#mustangCollection">class <i class="text-red">MustangCollection</i></a></li>
+                <li><a href="#relationship">class <i class="text-red">Relationship</i></a></li>
+                <li><a href="#collectionRelationship">class <i class="text-red">CollectionRelationship</i></a></li>
+                <li><a href="#formRelationship">class <i class="text-red">FormRelationship</i></a></li>
                 
                 <li class="divider"></li>
                 <li><a href="#docs">All</a></li>
@@ -42,23 +46,26 @@
     </nav>
 
   
+    <!-- Main Section of page -->
     <div class="content-center img-content text-center col-lg-8">
+      <!--<div class="col-lg-12 text-center">
+        <img src="images/logo.png" id="logo">
+      </div> -->
         <h1 id="heading-logo">Mustang JS</h1>
         <i>A JavaScript Library meant to make modifying &amp; binding to the DOM much easier and faster, and in an Object-Oriented way.</i>
 
         <div class="brand-icon">
             <span class="fa fa-globe"></span>
-            <small>IE9+, FireFox 27+, Chrome 3+, Safari + , &amp; Opera + (need to test)</small>
+            <small>IE9+, FireFox 27+, Chrome 33+, Safari 6+ , &amp; Opera 21+</small>
         </div>
 
         <div class="brand-icon">
             <span class="fa fa-sitemap"></span>
             <small>Object Oriented Code &amp; Syntax</small>
         </div>
-        
     </div>
 
-    <div class="content-center reg-content col-lg-8">
+    <div id="quick" class="content-center reg-content col-lg-8">
         <h1 id="heading-logo">Examples</h1>
         
         <p>See some quick and concise examples of Mustang in action.</p>
@@ -113,20 +120,27 @@
         <div class="large-gap"></div>
 
         <h3><i>If you've made it this far, take a look at the docs below. There's a lot more to Mustang than just querying elements!</i></h3>
-        
     </div>
 
+    <!-- End of Main Section -->
+
+
+    <!-- Start of Documentation -->
     <div class="content-center img-content  col-lg-11">
         <h1 id="docs" >Documentation</h1>
         <i>A complete reference to all classes, objects, and methods of each in the MustangJS library.</i>
 
         <div class="clearfix"></div>
 
+
+
         <div class="docs-container col-lg-12">
+
+            <!-- LEFT PANEL FOR DOCUMENTATION -->
             <div class="col-lg-4 no-pad doc-list">
-                <ul class="list-group">
+                <ul class="list-group doc-content" id="class-list">
                   <li class="list-group-item">
-                    <span class="badge">3</span>
+                    <span class="badge">12</span>
                     <a href="#mustang">Mustang</a>
                     <ul class="method">
                         <li><a href="#mustanggetContent">getContent()</a></li>
@@ -134,21 +148,66 @@
                         <li><a href="#mustanggetValue">getValue()</a></li>
                         <li><a href="#mustangsetValue">setValue()</a></li>
                         <li><a href="#mustanggetType">getType()</a></li>
-                        <li><a href="#mustangbindToVar">bindToVar()</a></li>
+                        <li><a href="#mustangbindToVariable">bindToVariable()</a></li>
+                        <li><a href="#mustangtextCountdown">textCountdown()</a></li>
+                        <li><a href="#mustangclick">click()</a></li>
+                        <li><a href="#mustangtype">type()</a></li>
+                        <li><a href="#mustangaddClass">addClass()</a></li>
+                        <li><a href="#mustangremoveClass">removeClass()</a></li>
                         <li><a href="#mustangtoJson">toJson()</a></li>
+                        <li><a href="#mustanglog">log()</a></li>
                     </ul>
                   </li>
                   <li class="list-group-item">
-                    <span class="badge">7</span>
-                    <a href="#mustangcollection">MustangCollection</a>
+                    <span class="badge">13</span>
+                    <a href="#mustangCollection">MustangCollection</a>
                     <ul class="method">
-                        <li><a href="#mustangMethodName">methodName()</a></li>
-                        <li><a href="#mustangMethodName2">otherMethod()</a></li>
+                        <li><a href="#mustangCollectiongetContent">getContent()</a></li>
+                        <li><a href="#mustangCollectionsetContent">setContent()</a></li>
+                        <li><a href="#mustangCollectionfirst">first()</a></li>
+                        <li><a href="#mustangCollectionlast">last()</a></li>
+                        <li><a href="#mustangCollectionfind">find()</a></li>
+                        <li><a href="#mustangCollectiongetType">getType()</a></li>
+                        <li><a href="#mustangCollectionbindAll">bindAll()</a></li>
+                        <li><a href="#mustangCollectionbindForm">bindForm()</a></li>
+                        <li><a href="#mustangCollectiongetOdds">getOdds()</a></li>
+                        <li><a href="#mustangCollectiongetEvens">getEvens()</a></li>
+                        <li><a href="#mustangCollectionforeach">foreach()</a></li>
+                        <li><a href="#mustangCollectiontoJson">toJson()</a></li>
+                        <li><a href="#mustangCollectionlog">log()</a></li>
+                    </ul>
+                  </li>
+                  <li class="list-group-item">
+                    <span class="badge">4</span>
+                    <a href="#relationship">Relationship</a>
+                    <ul class="method">
+                        <li><a href="#relationshipsetModel">setModel()</a></li>
+                        <li><a href="#relationshipset">set()</a></li>
+                        <li><a href="#relationshiptoJson">toJson()</a></li>
+                    </ul>
+                  </li>
+                  <li class="list-group-item">
+                    <span class="badge">4</span>
+                    <a href="#collectionRelationship">CollectionRelationship</a>
+                    <ul class="method">
+                        <li><a href="#collectionRelationshipatIndex">atIndex()</a></li>
+                        <li><a href="#collectionRelationshiptoJson">toJson()</a></li>
+                    </ul>
+                  </li>
+                  <li class="list-group-item">
+                    <span class="badge">4</span>
+                    <a href="#formRelationship">FormRelationship</a>
+                    <ul class="method">
+                        <li><a href="#formRelationshiptoJson">toJson()</a></li>
                     </ul>
                   </li>
                 </ul>
             </div>
+            <!-- End of LEFT PANEL DOCS -->
 
+
+
+            <!-- Right PANEL / METHODS OF DOCS -->
             <div class="col-lg-8 doc-content">
                 <div class="doc-content-section col-lg-12" id="mustang">
                     <h2>Mustang Object</h2>
@@ -167,213 +226,921 @@
 
                     <div class="small-gap"></div>
 
+                    <h3 class="lead">Methods Reference</h3>
 
+                        <div class="method-container">
+                            <h4 id="mustanggetContent">Mustang.getContent()</h4>
+
+                            <dl>
+                                <dt>@var</dt>
+                                <dd>(none)</dd>
+                                <dt>@return</dt>
+                                <dd>mixed</dd>
+                            </dl>
+
+                            <p>Grab the content (innerHTML) of an element.</p>
+                            <pre class="">
+                                <code class="language-javascript">
+                                  // instantiate new object
+                                  var example = new Mustang(".classname");
+
+                                  var cont = example.getContent();
+
+                                  // you can also method chain like below
+
+                                  var cont = new Mustang(".classname").getContent();
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="method-container">
+                            <h4 id="mustangsetContent">Mustang.setContent(mixed)</h4>
+
+                            <dl>
+                                <dt>@var</dt>
+                                <dd>string, int, primitive data types</dd>
+                                <dt>@return</dt>
+                                <dd>Mustang Object</dd>
+                            </dl>
+
+                            <p>Sets the content (innerHTML) of an element.</p>
+                            <pre class="">
+                                <code class="language-javascript">
+                                  // instantiate new object
+                                  var example = new Mustang(".classname");
+
+                                  var content = "String";
+                                  example.setContent(content);
+
+                                  content = 5;
+                                  example.setContent(content);
+
+                                  // you can also method chain like below
+
+                                  var example = new Mustang(".classname").setContent("New Content");
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="method-container">
+                            <h4 id="mustanggetValue">Mustang.getValue()</h4>
+
+                            <dl>
+                                <dt>@var</dt>
+                                <dd>(none)</dd>
+                                <dt>@return</dt>
+                                <dd>mixed</dd>
+                            </dl>
+
+                            <p>Gets the value of an element, if it is a form element (input, textarea, etc).</p>
+                            <pre class="">
+                                <code class="language-javascript">
+                                  // instantiate new object
+                                  var example = new Mustang(".classname");
+
+                                  
+                                  var content = example.getValue();
+
+
+                                  // you can also method chain like below
+
+                                  var stuff = new Mustang(".classname").getValue();
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="method-container">
+                            <h4 id="mustangsetValue">Mustang.setValue(mixed)</h4>
+
+                            <dl>
+                                <dt>@var</dt>
+                                <dd>string, int, primitive data types</dd>
+                                <dt>@return</dt>
+                                <dd>Mustang Object</dd>
+                            </dl>
+
+                            <p>Sets the value of an element, if it is a form element (input, textarea, etc).</p>
+                            <pre class="">
+                                <code class="language-javascript">
+                                  // instantiate new object
+                                  var example = new Mustang(".classname");
+
+                                  var content = "String";
+                                  example.setValue(content);
+
+                                  content = 5;
+                                  example.setValue(content);
+
+                                  // you can also method chain like below
+
+                                  var example = new Mustang(".classname").setValue("New Content");
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="method-container">
+                            <h4 id="mustanggetType">Mustang.getType()</h4>
+
+                            <dl>
+                                <dt>@var</dt>
+                                <dd>(none)</dd>
+                                <dt>@return</dt>
+                                <dd>String, either "block" or "form"</dd>
+                            </dl>
+
+                            <p>Returns the type of an element, if it is a form (input, textarea, etc) element or a block element (p, h1, etc). This function is used more internally, but if you find a use for it, go ahead!</p>
+                            <pre class="">
+                                <code class="language-javascript">
+                                  // instantiate new object
+                                  var example = new Mustang(".classname");
+
+                                  // returns 'form' or 'block'
+                                  example.getType();
+
+                                  // could use via method chaining
+                                  var type = new Mustang(".selector").getType();
+                                </code>
+                            </pre>
+
+                        </div>
+
+                        <div class="method-container">
+                            <h4 id="mustangbindToVariable">Mustang.bindToVariable(mixed *optional)</h4>
+
+                            <dl>
+                                <dt>@var</dt>
+                                <dd>Mixed, initial value for var</dd>
+                                <dt>@return</dt>
+                                <dd><i>Relationship</i> object</dd>
+                            </dl>
+
+                            <p>Returns an object with interface available for modifying the model or element to which this is binded.</p>
+                            <pre class="">
+                                <code class="language-javascript">
+                                  // instantiate new object
+                                  var example = new Mustang(".classname");
+
+                                  // returns 'Relationship' object, passing in initial value
+                                  example.bindToVar(10);
+
+                                  // could use via method chaining, no initial value
+                                  var type = new Mustang(".selector").bindToVariable();
+                                </code>
+                            </pre>
+
+                        </div>
+
+                        <div class="method-container">
+                            <h4 id="mustangtextCountdown">Mustang.textCountdown(span, max)</h4>
+
+                            <dl>
+                                <dt>@var</dt>
+                                <dd>Span, string as a selector for another element, typically a span or p etc.</dd>
+                                <dd>max (optional), the max amount of characters to represented in the countdown</dd>
+                                <dt>@return</dt>
+                                <dd>Mustang Object</dd>
+                            </dl>
+
+                            <p>This is a typical front end situation, shows users how many characters are remaining in the current input/textarea. If no max parameter is passed, then the MAXLENGTH attribute of the input this is called on will be used. If no MAXLENGTH exists, unexpected behavior may occur. Only stops user's ability to type if MAXLENGTH is set within the HTML document.</p>
+                            <pre class="">
+                                <code class="language-javascript">
+                                  // query an input element
+                                  var example = new Mustang(".textCountdownExample");
+
+                                  // example, portrayed below code
+                                  example.textCountdown("#counter", 25);
+
+                                </code>
+                            </pre>
+
+                            <p>Here's an example in action.</p>
+
+                            <input class="textCountdownExample" style="width:500px;" placeholder="Type here and see #counter span below" maxlength="25"> <br /> <br />
+                            <span id="counter"></span>
+
+                        </div>
+
+                        <div class="method-container">
+                            <h4 id="mustangclick">Mustang.click(func)</h4>
+
+                            <dl>
+                                <dt>@var</dt>
+                                <dd>func</dd>
+                                <dt>@return</dt>
+                                <dd>Mustang Object</dd>
+                            </dl>
+
+                            <p>If you've used jQuery, this does the exact same thing. Pass a function to be called on the click of the current mustang element. You can either pass a predefined function as a parameter, or create a closure within the context that you call .click()! Either works, but beware of using `this`, as it does not point to the current MustangObject when used in a closure!</p>
+                            <pre class="">
+                                <code class="language-javascript">
+                                  // instantiate new object
+                                  var ex = new Mustang(".classname");
+
+                                  ex.click(function(){
+                                      console.log("clicking now");
+                                  });
+
+                                  function handler()
+                                  {
+                                      console.log("MustangJS is badass!");
+                                  }
+
+                                  ex.click(handler);
+
+                                  ex.click(function(){
+                                      // do not reference `this` in here! 
+                                      // if need access to current element, just use the variable name
+                                      ex.addClass("whatever");
+                                  });
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="method-container">
+                            <h4 id="mustangtype">Mustang.type(func)</h4>
+
+                            <dl>
+                                <dt>@var</dt>
+                                <dd>func</dd>
+                                <dt>@return</dt>
+                                <dd>Mustang Object</dd>
+                            </dl>
+
+                            <p>This is practically the same as the Mustang.click() function. Just pass a method to be called when the current MustangObject is typed/keydown'd! By the way, this must be an input or textarea, so try not to use this method on non-form elements.</p>
+                            <pre class="">
+                                <code class="language-javascript">
+                                  // instantiate new object
+                                  var ex = new Mustang(".classname");
+
+                                  ex.type(function(){
+                                      console.log("typing now");
+                                  });
+
+                                  function handler()
+                                  {
+                                      console.log("MustangJS is badass!");
+                                  }
+
+                                  ex.type(handler);
+
+                                  ex.type(function(){
+                                      // do not reference `this` in here! 
+                                      // if need access to current element, just use the variable name
+                                      console.log(ex.getValue());
+                                  });
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="method-container">
+                            <h4 id="mustangaddClass">Mustang.addClass(class)</h4>
+
+                            <dl>
+                                <dt>@var</dt>
+                                <dd>class - string representing a class name to add</dd>
+                                <dt>@return</dt>
+                                <dd>Mustang Object</dd>
+                            </dl>
+
+                            <p>Adds a class to the current mustang element.</p>
+                            <pre class="">
+                                <code class="language-javascript">
+                                  // instantiate new object
+                                  var ex = new Mustang(".initial");
+
+                                  ex.addClass("someClass");
+
+                                  // or combine mustang functions
+                                  ex.click(function(){
+                                    ex.addClass("someClass");
+                                  });
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="method-container">
+                            <h4 id="mustangremoveClass">Mustang.removeClass(class)</h4>
+
+                            <dl>
+                                <dt>@var</dt>
+                                <dd>class - string representing a class name to remove</dd>
+                                <dt>@return</dt>
+                                <dd>Mustang Object</dd>
+                            </dl>
+
+                            <p>Adds a class to the current mustang element.</p>
+                            <pre class="">
+                                <code class="language-javascript">
+                                  // instantiate new object
+                                  var ex = new Mustang(".initial");
+
+                                  ex.removeClass("someClass");
+
+                                  // or combine mustang functions
+                                  ex.click(function(){
+                                    ex.removeClass("someClass");
+                                  });
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="method-container">
+                            <h4 id="mustangtoJson">Mustang.toJson()</h4>
+
+                            <dl>
+                                <dt>@var</dt>
+                                <dd>(none)</dd>
+                                <dt>@return</dt>
+                                <dd>JSON</dd>
+                            </dl>
+
+                            <p>Returns a properly formatted JSON object according to the element and a corresponding value depending on it's type. If the element is a form element, the value of the object will be the value of said form element, else it will be the innerHTML of all block elements.</p>
+                            <pre class="">
+                                <code class="language-javascript">
+                                  // instantiate new object
+                                  var example = new Mustang(".classname");
+
+                                  // returns 'Relationship' object, passing in initial value
+                                  var obj = example.toJson();
+
+                                  /*
+                                  The default JSON object returned from toJson()
+                                  {
+                                    "value" : "This is the value or innerHTML of the element"
+                                  }
+                                  */
+                                </code>
+                            </pre>
+
+                        </div> 
+
+                        <div class="method-container">
+                            <h4 id="mustanglog">Mustang.log()</h4>
+
+                            <dl>
+                                <dt>@var</dt>
+                                <dd>(none)</dd>
+                                <dt>@return</dt>
+                                <dd>(none)</dd>
+                            </dl>
+
+                            <p>Prints the current Mustang object to the console.</p>
+                            <pre class="">
+                                <code class="language-javascript">
+                                  // instantiate new object
+                                  var example = new Mustang(".classname");
+
+                                  example.log();
+                                </code>
+                            </pre>
+
+                        </div>  
+                </div>  
+
+                <div class="doc-content-section col-lg-12" id="mustangCollection">
+                    <h2>MustangCollection Object</h2>
+
+                    <p class="details lead">Details : </p>
+                    <p>A MustangCollection is nothing more than an aggregated group of Mustang objects, returned when a query from the user returns more than one element that matches it. Nothing different needs to be done by the progammer, just access multiple elements the same way you would a single element, with a call to the Mustang class.</p>
+
+                    <div class="small-gap"></div>
+
+                    <p class="lead">Instantiating MustangCollection Object</p>
+                    <pre class="">
+                        <code class="language-javascript">
+                          // instantiate new object
+                          var example = new Mustang(".multiple-elems");
+                        </code>
+                    </pre>
+
+                    <div class="small-gap"></div>
 
                     <h3 class="lead">Methods Reference</h3>
 
                     <div class="method-container">
-                        <h4 id="mustanggetContent">Mustang.getContent()</h4>
-
+                        <h4 id="mustangCollectiongetContent">MustangCollection.getContent()</h4>
                         <dl>
                             <dt>@var</dt>
                             <dd>(none)</dd>
                             <dt>@return</dt>
+                            <dd>Array []</dd>
+                        </dl>
+                        <p>Grab the content (innerHTML) of each element. Returns an array of contents, in order that elements are found in page.</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              var content = example.getContent();
+
+                              // you can also method chain like below
+
+                              var content = new Mustang(".classname").getContent();
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="method-container">
+                        <h4 id="mustangCollectionsetContent">MustangCollection.setContent()</h4>
+                        <dl>
+                            <dt>@var</dt>
                             <dd>mixed</dd>
-                        </dl>
-
-                        <p>Grab the content (innerHTML) of an element.</p>
-                        <pre class="">
-                            <code class="language-javascript">
-                              // instantiate new object
-                              var example = new Mustang(".classname");
-
-                              var cont = example.getContent();
-
-                              // you can also method chain like below
-
-                              var cont = new Mustang(".classname").getContent();
-                            </code>
-                        </pre>
-
-                    </div>
-
-                    
-
-
-                    <div class="method-container">
-                        <h4 id="mustangsetContent">Mustang.setContent(mixed)</h4>
-
-                        <dl>
-                            <dt>@var</dt>
-                            <dd>string, int, primitive data types</dd>
                             <dt>@return</dt>
-                            <dd>Mustang Object</dd>
+                            <dd>(none)</dd>
                         </dl>
-
-                        <p>Sets the content (innerHTML) of an element.</p>
+                        <p>Sets the content (innerHTML) of each element. Returns an array of contents, in order that elements are found in page. If given a string or value, all elements value will be set to that argument, but if given array, each element in collection parallel to element in array argument will be set.</p>
                         <pre class="">
                             <code class="language-javascript">
                               // instantiate new object
                               var example = new Mustang(".classname");
 
-                              var content = "String";
-                              example.setContent(content);
+                              var content = example.setContent("All elems set to this string");
 
-                              content = 5;
-                              example.setContent(content);
+                              // array should have same number of keys as elements 
+                              //in MustangCollection, else error will be thrown
 
-                              // you can also method chain like below
-
-                              var example = new Mustang(".classname").setContent("New Content");
+                              var content = new Mustang(".classname").setContent(
+                              ['each', 'element', 'has', 'different', 'value']
+                              );
                             </code>
                         </pre>
-
                     </div>
 
-
                     <div class="method-container">
-                        <h4 id="mustanggetValue">Mustang.getValue()</h4>
-
+                        <h4 id="mustangCollectionfirst">MustangCollection.first()</h4>
                         <dl>
                             <dt>@var</dt>
                             <dd>(none)</dd>
                             <dt>@return</dt>
-                            <dd>mixed</dd>
+                            <dd>Mustang object</dd>
                         </dl>
-
-                        <p>Gets the value of an element, if it is a form element (input, textarea, etc).</p>
+                        <p>Returns the first Mustang Object present in the MustangCollection.</p>
                         <pre class="">
                             <code class="language-javascript">
                               // instantiate new object
                               var example = new Mustang(".classname");
 
-                              
-                              var content = example.getValue();
+                              var first = example.first();
 
-
-                              // you can also method chain like below
-
-                              var stuff = new Mustang(".classname").getValue();
                             </code>
                         </pre>
-
                     </div>
 
                     <div class="method-container">
-                        <h4 id="mustangsetValue">Mustang.setValue(mixed)</h4>
-
-                        <dl>
-                            <dt>@var</dt>
-                            <dd>string, int, primitive data types</dd>
-                            <dt>@return</dt>
-                            <dd>Mustang Object</dd>
-                        </dl>
-
-                        <p>Sets the value of an element, if it is a form element (input, textarea, etc).</p>
-                        <pre class="">
-                            <code class="language-javascript">
-                              // instantiate new object
-                              var example = new Mustang(".classname");
-
-                              var content = "String";
-                              example.setValue(content);
-
-                              content = 5;
-                              example.setValue(content);
-
-                              // you can also method chain like below
-
-                              var example = new Mustang(".classname").setValue("New Content");
-                            </code>
-                        </pre>
-
-                    </div>
-
-                    <div class="method-container">
-                        <h4 id="mustanggetType">Mustang.getType()</h4>
-
+                        <h4 id="mustangCollectionlast">MustangCollection.last()</h4>
                         <dl>
                             <dt>@var</dt>
                             <dd>(none)</dd>
                             <dt>@return</dt>
-                            <dd>String, either "block" or "form"</dd>
+                            <dd>Mustang object</dd>
                         </dl>
-
-                        <p>Returns the type of an element, if it is a form (input, textarea, etc) element or a block element (p, h1, etc) </p>
+                        <p>Returns the last Mustang Object present in the MustangCollection.</p>
                         <pre class="">
                             <code class="language-javascript">
                               // instantiate new object
                               var example = new Mustang(".classname");
 
-                              // returns 'form' or 'block'
-                              example.getType();
+                              var first = example.last();
 
-                              // could use via method chaining
-                              var type = new Mustang(".selector").getType();
                             </code>
                         </pre>
-
                     </div>
 
                     <div class="method-container">
-                        <h4 id="mustangbindToVar">Mustang.bindToVar(mixed *optional)</h4>
-
+                        <h4 id="mustangCollectionfind">MustangCollection.find()</h4>
                         <dl>
                             <dt>@var</dt>
-                            <dd>Mixed, initial value for var</dd>
+                            <dd>int i</dd>
                             <dt>@return</dt>
-                            <dd><i>Relationship</i> object</dd>
+                            <dd>Mustang object</dd>
                         </dl>
-
-                        <p>Returns an object with interface available for modifying the model or element to which this is binded.</p>
+                        <p>Returns the Mustang Object present in the MustangCollection at position i. Access to elements is parallel to that of an array (i.e. the first element in a MustangCollection is at .find(0)).</p>
                         <pre class="">
                             <code class="language-javascript">
                               // instantiate new object
                               var example = new Mustang(".classname");
 
-                              // returns 'Relationship' object, passing in initial value
-                              example.bindToVar(10);
+                              // returns first element
+                              var first = example.find(0);
 
-                              // could use via method chaining, no initial value
-                              var type = new Mustang(".selector").bindToVar();
                             </code>
                         </pre>
-
                     </div>
 
                     <div class="method-container">
-                        <h4 id="mustangtoJson">Mustang.toJson()</h4>
-
+                        <h4 id="mustangCollectiongetType">MustangCollection.getType()</h4>
                         <dl>
                             <dt>@var</dt>
-                            <dd>(none)</dd>
+                            <dd></dd>
                             <dt>@return</dt>
-                            <dd>JSON</dd>
+                            <dd>Array []</dd>
                         </dl>
-
-                        <p>Returns a properly formatted JSON object according to the element and a corresponding value depending on it's type. If the element is a form element, the value of the object will be the value of said form element, else it will be the innerHTML of all block elements.</p>
+                        <p>This is used more internally, but feel welcome to make use of it however you please. Returns an array of strings, representing each element in the MustangCollection. The two possible values are "block" and "form", depending on if element is a block element or an input/form element of any type.</p>
                         <pre class="">
                             <code class="language-javascript">
                               // instantiate new object
                               var example = new Mustang(".classname");
 
-                              // returns 'Relationship' object, passing in initial value
-                              var obj = example.toJson();
+                              // returns first element
+                              var first = example.getType();
 
-                              /*
-                              The default JSON object returned from toJson()
+                              // an example of a returned value
+                              ['form', 'form', 'block', 'form']
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="method-container">
+                        <h4 id="mustangCollectionbindAll">MustangCollection.bindAll()</h4>
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>(optional) vals[] - Array</dd>
+                            <dt>@return</dt>
+                            <dd>CollectionRelationship object</dd>
+                        </dl>
+                        <p>Ahh, getting down to the cool stuff. This binds all the elements belonging to a MustangCollection to a CollectionRelationship object. Arguments consists of an optional array of values to pass, which act as the initial values/contents for the elements. Notice if the element is a block element, it's content(innerHTML) will be set to the corresponding value, whereas a form element will have it's value set to the corresponding value from the vals argument. If no vals argument is passed, the value/content it is currently at the time of this function call will act as the initial values.</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              // pass no vals argument
+                              var rel = example.bindAll();
+
+                              // pass array as argument
+                              var rel = example.bindAll(
+                              ['first value', 'second value', 'etc.']
+                              );    
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="method-container">
+                        <h4 id="mustangCollectionbindForm">MustangCollection.bindForm()</h4>
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>(optional) vals{} - Object</dd>
+                            <dt>@return</dt>
+                            <dd>CollectionRelationship object</dd>
+                        </dl>
+                        <p>This function is especially cool, &amp; similiar to the bindAll() function. Basically, the difference is that this function expects to be called on a form, (notice when you query a form, the form itself is not returned, but all of the elements inside the form) &amp; it expects a JavaScript/JSON object with properties corresponding to the 'names' of the inputs and elements in the form. Every property in the argument, will be the initial value for the element in the form with the same name. As with bindAll(), the argument is optional and if one is not passed then the initial values are what they were at the time of the function call to bindForm(). See an example below.</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              // pass no vals argument, binds all elems in form 
+                              // excluding block elements and submit buttons
+                              var rel = example.bindForm();
+
+                              // pass object as argument
+                              var rel = example.bindAll(
                               {
-                                "value" : "This is the value or innerHTML of the element"
+                                "nameOfInput" : "corresponding value",
+                                "nextInputName" : 4
                               }
-                              */
+                              );    
                             </code>
                         </pre>
-
+                        <p>In this example of code, the input with the name of "nameOfInput" will be set to "corresponding value", and the input with the name of "nextInputName" will be set to 4. This is good for populating a form for an existing user that might want to edit some of their account settings, because you can grab the existing info, and pass it a MustangCollection caught by querying a form, and the form is populated with their existing info.</p>
                     </div>
 
-                    
+                    <div class="method-container">
+                        <h4 id="mustangCollectiongetOdds">MustangCollection.getOdds()</h4>
+                        <dl>
+                            <dt>@var</dt>
+                            <dd></dd>
+                            <dt>@return</dt>
+                            <dd>MustangCollection object</dd>
+                        </dl>
+                        <p>This function returns a MustangCollection consisting of all the odd members from the previous MustangCollection. Differs from .find() in that the evens/odds are represented by what the user sees, and not accessed like an array. Therefore the first element on the screen that a user sees, would be considered odd, even though in the original MustangCollection it would be found at .find(0), which is technically an even number.</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              // get odds 
+                              var rel = example.getOdds();    
+                            </code>
+                        </pre>
+                        
+                    </div>
+
+                    <div class="method-container">
+                        <h4 id="mustangCollectiongetEvens">MustangCollection.getEvens()</h4>
+                        <dl>
+                            <dt>@var</dt>
+                            <dd></dd>
+                            <dt>@return</dt>
+                            <dd>MustangCollection object</dd>
+                        </dl>
+                        <p>This function returns a MustangCollection consisting of all the even members from the previous MustangCollection. Differs from .find() in that the evens/odds are represented by what the user sees, and not accessed like an array. Therefore the first element on the screen that a user sees, would be considered odd, even though in the original MustangCollection it would be found at .find(0), which is technically an even number.</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              // get evens 
+                              var rel = example.getEvens();    
+                            </code>
+                        </pre>
+                        
+                    </div>
+
+                    <div class="method-container">
+                        <h4 id="mustangCollectionforeach">MustangCollection.foreach()</h4>
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>function(i)</dd>
+                            <dt>@return</dt>
+                            <dd>(none)</dd>
+                        </dl>
+                        <p>Acts as a way to traverse through the current MustangCollection of elements. Argument i must be passed to the closure you provide, as it gives you reference to which element you are currently at in the loop.</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              // prints content of each elem in collection
+                              example.foreach(function(i){
+                                console.log(this.elems[i].getContent())
+                              });    
+                            </code>
+                        </pre>
+                        
+                    </div>
+
+                    <div class="method-container">
+                        <h4 id="mustangCollectiontoJson">MustangCollection.toJson()</h4>
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>(none)</dd>
+                            <dt>@return</dt>
+                            <dd>JSON object</dd>
+                        </dl>
+                        <p>Returns array of JSON objects representing the contents/values of each element in the MustangCollection.</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              var data = example.toJson();   
+                            </code>
+                        </pre>
+                        
+                    </div>
+
+                    <div class="method-container">
+                        <h4 id="mustangCollectionlog">MustangCollection.log()</h4>
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>(none)</dd>
+                            <dt>@return</dt>
+                            <dd>(none)</dd>
+                        </dl>
+                        <p>Prints the current MustangCollection object to the console.</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              example.log();   
+                            </code>
+                        </pre>
+                        
+                    </div>
+                     
+
                 </div>
-                
+
+                <div class="doc-content-section col-lg-12" id="relationship">
+                    <h2>Relationship Object</h2>
+
+                    <p class="details lead">Details : </p>
+                    <p>A relationship object represents a binding of data between an HTML element and a JavaScript variable. For the purpose of general use, a relationship object merely binds a property of a JavaScript object to the element's value/content, depending on the type of the variable. If the element given the relationship is an input, the value is stored, whereas if the element is a block element, the content(innerHTML) is stored. Don't worry about this though, the logic is abstracted away so that you don't have to worry about that, Mustang makes the proper decision for you based on the type of the element (block or form).</p>
+
+                    <div class="small-gap"></div>
+
+                    <p class="lead">Instantiating Relationship Object</p>
+                    <pre class="">
+                        <code class="language-javascript">
+                          // instantiate new Mustang object
+                          var example = new Mustang(".single-elem");
+
+                          // now bind it to a JavaScript variable, 
+                          // and store the resulting object into a variable
+
+                          var result = example.bindToVariable();
+
+                        </code>
+                    </pre>
+
+                    <p>There are now multiple methods you can use to interact with the binding stored in <i class="text-red">result</i>.</p>
+
+                    <div class="small-gap"></div>
+
+                    <h3 class="lead">Methods Reference</h3>
+
+                    <div class="method-container">
+                        <h4 id="relationshipsetModel">Relationship.setModel()</h4>
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>mixed val</dd>
+                            <dt>@return</dt>
+                            <dd>Relationship this</dd>
+                        </dl>
+                        <p>Set the model of the current relationship to the argument val.</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              var rel = example.bindToVariable();
+                              rel.setModel(5);
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="method-container">
+                        <h4 id="relationshipset">Relationship.set()</h4>
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>mixed val</dd>
+                            <dt>@return</dt>
+                            <dd>Relationship this</dd>
+                        </dl>
+                        <p>An alias of <a href="#relationshipsetModel">setModel()</a>.</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              var rel = example.bindToVariable();
+                              rel.set(5);
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="method-container">
+                        <h4 id="relationshiptoJson">Relationship.toJson()</h4>
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>(none)</dd>
+                            <dt>@return</dt>
+                            <dd>JSON Object</dd>
+                        </dl>
+                        <p>Returns a properly formatted JSON object containing the value of the model at the time of the call of toJson().</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".classname");
+
+                              var rel = example.bindToVariable();
+                              var data = rel.toJson();
+                            </code>
+                        </pre>
+                    </div>
+
+                </div>
+
+                <div class="doc-content-section col-lg-12" id="collectionRelationship">
+                    <h2>CollectionRelationship Object</h2>
+
+                    <p class="details lead">Details : </p>
+                    <p>A CollectionRelationship merely holds a list of Relationships between elements and values.</p>
+
+                    <div class="small-gap"></div>
+
+                    <p class="lead">Instantiating Relationship Object</p>
+                    <pre class="">
+                        <code class="language-javascript">
+                          // instantiate new Mustang object
+                          var example = new Mustang(".multiple-elem");
+
+                          // now bind it to a JavaScript variable, 
+                          // and store the resulting object into a variable
+
+                          var result = example.bindAll();
+
+                        </code>
+                    </pre>
+
+                    <p>There are now multiple methods you can use to interact with the binding stored in <i class="text-red">result</i>.</p>
+
+                    <div class="small-gap"></div>
+
+                    <h3 class="lead">Methods Reference</h3>
+
+                    <div class="method-container">
+                        <h4 id="collectionRelationshipatIndex">Relationship.atIndex()</h4>
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>int i</dd>
+                            <dt>@return</dt>
+                            <dd>Relationship object</dd>
+                        </dl>
+                        <p>Returns the Relationship object at the index of i. Access these like an array, starting at 0.</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".multiple");
+
+                              var rel = example.bindAll();
+                              rel.atIndex(5).set("New value for model");
+                              // notice we method chained to the returned Relationship from atIndex()
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="method-container">
+                        <h4 id="collectionRelationshiptoJson">CollectionRelationship.toJson()</h4>
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>(none)</dd>
+                            <dt>@return</dt>
+                            <dd>JSON Objects (Array)</dd>
+                        </dl>
+                        <p>Returns an array of properly formatted JSON objects, representing all of the elements in the CollectionRelationship object.</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".multiple");
+
+                              var rel = example.bindAll();
+                              rel.toJson();
+                            </code>
+                        </pre>
+                    </div>
+                </div> 
+
+
+                <div class="doc-content-section col-lg-12" id="formRelationship">
+                    <h2>FormRelationship Object</h2>
+
+                    <p class="details lead">Details : </p>
+                    <p>A FormRelationship is a list of Relationships binded to the elements of a form.</p>
+
+                    <div class="small-gap"></div>
+
+                    <p class="lead">Instantiating FormRelationship Object</p>
+                    <pre class="">
+                        <code class="language-javascript">
+                          // instantiate new Mustang object
+                          var example = new Mustang(".form-class");
+
+                          var result = example.bindForm();
+                        </code>
+                    </pre>
+
+                    <p>There is some interesting functionality happening under the hood of this object. Upon being instantiated, an argument can optionally be passed, representing a set of data that should be JSON compliant. Basically, the constructor assumes that the property names in the JSON object correspond to the names of the inputs within the form being binded, and can therefore be set initial values. Another exmaple is below.</p>
+
+                    <pre class="">
+                        <code class="language-javascript">
+                          // say you hit a database, and got a result for a user
+                          // and that result looks like the JSON obj below
+                          var data = {
+                            "name" : "Colby Perriwinkle",
+                            "age"  : "120",
+                            "fav_color" : "lavender"
+                          };
+
+                          // if you were to bind the above object
+                          // as a FormCollection by doing the following
+                          var example = new Mustang(".some-form");
+                          var result = example.bindForm(data);
+                        </code>
+                    </pre>
+
+                    <p>By passing the data variable, which is a JSON object in essence to the bindForm constructor, MustangJS does a little magic. The input with name="name", it's value is set to "Colby Perriwinkle". The input who's name is "age" has it's value automatically set to "120". Regardless of the type of the input, the correct value is used as the initial model for each Relationship. Cool huh?</p>
+
+                    <div class="small-gap"></div>
+
+                    <h3 class="lead">Methods Reference</h3>
+
+                    <div class="method-container">
+                        <h4 id="formRelationshiptoJson">FormRelationship.toJson()</h4>
+                        <dl>
+                            <dt>@var</dt>
+                            <dd>(none)</dd>
+                            <dt>@return</dt>
+                            <dd>JSON object (Array)</dd>
+                        </dl>
+                        <p>Returns an array of properly formatted JSON objects representing the values of each input within the form.</p>
+                        <pre class="">
+                            <code class="language-javascript">
+                              // instantiate new object
+                              var example = new Mustang(".form-class");
+
+                              var re = example.bindForm();
+                              var data = re.toJson();
+                            </code>
+                        </pre>
+                    </div>
+                </div> 
+
+
+
+
             </div>
         </div>
 
@@ -386,12 +1153,20 @@
 
 
 <footer class="col-lg-12">
-    <p class="text-center">All Rights Reserved Motha Fuckasss</p>
+    <p class="text-center">MustangJS is a trademark of <a href="http://www.ericdiviney.com/" class="text-red">Eric Diviney</a>. Copywright &copy; Eric Diviney.</p>
 </footer>
   
 
 
 <script type="text/javascript" src="javascripts/main.js"></script>
+<script type="text/javascript" src="javascripts/mustang.js"></script>
+<script type="text/javascript">
+
+var TCE = new Mustang(".textCountdownExample");
+
+TCE.textCountdown("#counter");
+
+</script>
 
 </body>
 </html>
