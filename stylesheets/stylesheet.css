@@ -147,6 +147,14 @@ footer{
   padding-left:25px;
 }
 
+.doc-content-section h2:first-child{
+	padding-top:70px;
+}
+
+.method-container h4:first-child{
+	padding-top:70px;
+}
+
 .doc-content-section dt, .doc-content-section dd{
   line-height:1.75em;
 }
